@@ -1,0 +1,20 @@
+<?php
+return [
+    '~^$~' => [\Controllers\MainController::class, 'main'],
+    '~article/show/(\d*)~' => [\Controllers\ArticleController::class, 'show'],
+    '~article/edit/(\d*)~' => [\Controllers\ArticleController::class, 'edit'],
+    '~article/update/(\d*)~' => [\Controllers\ArticleController::class, 'update'],
+    '~article/add~' => [\Controllers\ArticleController::class, 'add'],
+    '~article/create~' => [\Controllers\ArticleController::class, 'create'],
+    '~article/delete/(\d+)~' => [\Controllers\ArticleController::class, 'delete'],
+    '~comments/delete/(\d+)~' => [\Controllers\CommentsController::class, 'delete'],
+    '~comments/(\d+)~' => [Controllers\CommentsController::class, 'view'],
+    '~comments/add/(\d+)~' => [Controllers\CommentsController::class, 'add'],
+    '~comments/edit/(\d+)~' => [Controllers\CommentsController::class, 'edit'],
+    '~login~' => [\Controllers\LoginController::class, 'view'],
+    '~register~' => [\Controllers\RegisterController::class, 'view'],
+    '~register/add~' => [\Controllers\RegisterController::class, 'add'],
+    '~logout~' => [\Controllers\LogoutController::class, 'view'],
+    '~about-me~' => [\Controllers\AboutMeController::class, 'view'],
+    '~article/like/(\d+)~' => [\Controllers\ArticleController::class, 'like'],
+];

@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,main {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+
+}
+
+.layout {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh; /* Минимальная высота экрана (100% видимой высоты) */
+    height: 100%;
+    min-width: 100vw;
+    width: 100%;
+    overflow: hidden; /* Используем overflow для корректного отображения блоков */
+}
+
+.layout tr td {
+    padding: 20px;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-indent: 30px;
+    height: 60px; /* Установите фиксированную высоту, которая вам подходит */
+}
+
+.header .logo {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    max-height: 25px; /* Подберите подходящую высоту логотипа */
+}
+
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Установите фиксированную высоту, которая вам подходит */
+}
+
+.sidebarHeader {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #333;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul li a:hover {
+    color: #001f3f;
+    background-color: #ecf0f1;
+}
+
+.article {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left:260px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    font-size:24px;
+
+}
+
+.article p.author {
+    align-self: flex-start;
+    font-size: 16px;
+    color: #333;
+}
+
+.article p.category {
+    align-self: flex-start;
+    font-size: 16px;
+    color: #333;
+}
+
+.article p {
+    font-size: 18px;
+    color: #333;
+}
+
+.delete-link {
+    color: #d9534f;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #d9534f;
+    padding: 5px 10px;  
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+    font-size: 18px;
+}
+
+.delete-link:hover {
+    background-color: #d9534f;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+    
+}
+
+#search {
+    flex: 1; /* Занимает все доступное пространство, увеличивая длину */
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-right: 10px; /* Добавлен отступ справа */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left:260px;
+}
+
+input[type="submit"] {
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+

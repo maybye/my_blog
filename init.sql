@@ -1,0 +1,44 @@
+CREATE TABLE articles (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ author_id INT,
+ name VARCHAR(255),
+ text TEXT,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ category_id INT,
+ likes INT DEFAULT 0,
+ FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE,
+ FOREIGN KEY (category_id) REFERENCES categories(category_id) ON DELETE SET
+NULL
+);
+CREATE TABLE categories (
+ category_id INT AUTO_INCREMENT PRIMARY KEY,
+ name VARCHAR(255)
+);
+CREATE TABLE comments (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ article_id INT,
+ author_id INT,
+ text TEXT,
+ date DATE,
+14
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE,
+ FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE TABLE likes (
+ like_id INT AUTO_INCREMENT PRIMARY KEY,
+ article_id INT,
+ user_id INT,
+ FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE,
+ FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE TABLE users (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ nickname VARCHAR(255),
+ email VARCHAR(255),
+ is_confirmed INT DEFAULT 0,
+ role VARCHAR(255),
+ password_hash VARCHAR(255),
+ auth_token VARCHAR(255),
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
